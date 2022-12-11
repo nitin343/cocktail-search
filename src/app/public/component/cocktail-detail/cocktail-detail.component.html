@@ -1,0 +1,38 @@
+<div class="cd_component_container">
+  <div class="cd_main_container">
+    <div routerLink="/" style="cursor: pointer;"><mat-icon>arrow_left_alt </mat-icon></div>
+    <div class="cd_main_page1">
+      <div class="cd_page1_image_container">
+        <img class="cd_page1_image" src="{{ cocktailDetail.strDrinkThumb }}" />
+      </div>
+      <div class="cd_page2_detail">
+        <div class="cd_page2_drinkC">
+          {{ cocktailDetail.strCategory }}
+          <span class="cd_page2_drinkT">
+            ({{ cocktailDetail.strAlcoholic }})
+          </span>
+        </div>
+        <div class="cd_page2_title">
+          {{ cocktailDetail.strDrink }}
+        </div>
+        <!-- <div class="cd_page2_drinkT">{{cocktailDetail.strAlcoholic}}</div> -->
+      </div>
+    </div>
+    <div class="cd_main_page2">
+      <div class="cd_page2_inst">
+        <span class="cd_page2_instruction">Instruction : </span>
+        <span class="cd_page2_instruction_detail">{{
+          cocktailDetail.strInstructions
+        }}</span>
+      </div>
+      <div class="cd_page2_ing">
+        <span class="cd_page2_ing_content">Ingredient</span>
+        <div class="cd_page_ing_li">
+            <ul *ngFor="let im of ingredient">
+                <li>{{im.ingredient}}<span>({{im.measure}})</span></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

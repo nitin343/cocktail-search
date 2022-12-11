@@ -1,0 +1,53 @@
+<div class="ck_component_container">
+  <div class="ck_list_component">
+      <header class="ck_list_header">
+        <div class="ck_list_header_logo">Drink This, Not That!</div>
+        <div class="ck_list_header_search">
+            <form [formGroup]="formGroup" class="example-form ck_list_header_search_input" >
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label class="ck_list_header_search_hint">Search your fav cocktail</mat-label>
+                  <input type="text"
+                  placeholder="Pick one"
+                  aria-label="Number"
+                  matInput
+                  keyDown="filter(e)"
+                  formControlName = "cocktailName"
+                  [matAutocomplete]="auto">
+                         <mat-icon matSuffix>search</mat-icon>
+                  <mat-autocomplete  autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions" [value]="option.strDrink">
+                      {{option.strDrink}}
+                    </mat-option>
+                  </mat-autocomplete>
+                  <!-- <mat-hint class="ck_list_header_search_hint">search your fav cocktail</mat-hint> -->
+                </mat-form-field>
+              </form> 
+        </div>
+      </header>
+  </div>
+
+  <div>
+    <main class="ck_main">
+      <div *ngFor="let option of pagedList">
+          <mat-card class="example-card">
+              <mat-card-header class="ck_main_header">
+                <div mat-card-avatar class="example-header-image">
+                    <img mat-card-image src={{option.strDrinkThumb}}>
+                </div>
+                <mat-card-title class="ck_main_title">{{option.strDrink}}</mat-card-title>
+                <mat-card-subtitle>Cocktail</mat-card-subtitle>
+              </mat-card-header>
+              <img (click)="productDetail(option.strDrink)" class="ck_main_img" src={{option.strDrinkThumb}}>
+          </mat-card>
+      </div>
+          
+    </main>
+    <mat-paginator [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = OnPageChange($event)">
+    </mat-paginator>
+  </div>
+
+
+</div>

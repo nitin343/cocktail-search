@@ -1,0 +1,108 @@
+.cd_component_container {
+  height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cd_main_container {
+  /* border: 2px solid red; */
+  border: 1px solid #ccc;
+  height: 90vh;
+  width: 95vw;
+  overflow: hidden;
+}
+
+.cd_main_page1 {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 30px;
+  height: 50%;
+  /* border: 1px solid red; */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cd_page1_image_container {
+  margin: 10px 0;
+}
+
+.cd_page1_image {
+  height: 250px;
+  width: 260x;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cd_page2_title {
+  font-size: 50px;
+  font-weight: 500;
+  height: 100%;
+  margin: 20px 0;
+}
+
+.cd_page2_drinkC {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 20px 0 30px 0;
+}
+.cd_page2_drinkT {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.cd_page2_detail {
+  height: auto;
+  width: 50%;
+}
+
+.cd_main_page2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 0;
+  /* border: 1px solid red; */
+  height: 46%;
+  /* overflow-y: scroll; */
+
+}
+
+.cd_page2_instruction {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.cd_page2_instruction_detail {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.cd_page2_inst{
+    /* border: 1px solid red; */
+    width: 70%;
+}
+
+.cd_page2_ing{
+    /* border: 2px solid red; */
+    width: 70%;
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.cd_page2_ing_content{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.cd_page_ing_li{
+    margin: 10px 0;
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
