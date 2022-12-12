@@ -105,6 +105,15 @@
         margin: 20px 0;
     }
 
+    .ck_main{
+        border: 2px solid red;
+        height: 62vh;
+    }
+
+    ::ng-deep .mat-paginator-container {
+        padding: 0 0px !important;
+      }
+
     .ck_list_component{
         /* border: 2px solid red; */
         height: 140px;

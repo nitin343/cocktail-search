@@ -106,3 +106,54 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+
+@media only screen and (max-width: 700px){
+    .cd_main_container {
+        overflow: scroll;
+      }
+
+    .cd_main_page1 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cd_page1_image {
+        height: 150px;
+        width: 150x;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .cd_page2_detail {
+        height: auto;
+        width: 100%;
+        text-align: center;
+      }
+
+      .cd_page2_title {
+        font-size: 20px;
+      }
+      
+      .cd_page2_drinkC {
+        font-size: 15px;
+        font-weight: 300;
+      
+      }
+      .cd_page2_drinkT {
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      .cd_page2_instruction {
+        font-size: 20px;
+      }
+      
+      .cd_page2_instruction_detail {
+        font-size: 15px;
+      }
+
+      .cd_page2_ing_content{
+        font-size: 20px;
+    }
+}
