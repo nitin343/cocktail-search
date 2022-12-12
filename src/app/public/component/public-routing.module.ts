@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'cocktail_detail/:id',
     component: CocktailDetailComponent
-  },
+  },{
+    path: '**',
+    redirectTo:'cocktail_list',
+    pathMatch:'full'
+  }
 ]
 },
 ];

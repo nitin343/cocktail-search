@@ -32,15 +32,25 @@ export class CocktailDetailComponent implements OnInit {
       this.cocktailDetail = res.drinks[0];
       console.log('strIngredient'+1);
       
-      for(let i = 1 ; i < 15 ; i++){
-        let ingrdient = 'strIngredient'+i;
-        let measure = 'strMeasure'+i
-        if(this.cocktailDetail[ingrdient] !== null){
-          this.ingredient.push({
-           'ingredient': this.cocktailDetail[ingrdient],
-           'measure': this.cocktailDetail[measure]
-          })
-        }
+      // for(let i = 1 ; i < 15 ; i++){
+      //   let ingrdient = 'strIngredient'+i;
+      //   let measure = 'strMeasure'+i
+      //   if(this.cocktailDetail[ingrdient] !== null){
+      //     this.ingredient.push({
+      //      'ingredient': this.cocktailDetail[ingrdient],
+      //      'measure': this.cocktailDetail[measure]
+      //     })
+      //   }else{
+      //     return ;
+      //   }
+      // }
+      let i = 1;
+      while (this.cocktailDetail['strIngredient'+ i]) {
+        this.ingredient.push({
+            'ingredient': this.cocktailDetail['strIngredient'+ i],
+            'measure': this.cocktailDetail['strMeasure' + i]
+        })
+        i++
       }
       console.log(this.ingredient , 'ingrdient');
     });
